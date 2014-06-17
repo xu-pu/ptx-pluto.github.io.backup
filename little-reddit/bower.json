@@ -1,0 +1,15 @@
+{
+    "name": "little-reddit-reader",
+    "version": "0.0.1",
+    "dependencies": {
+	"requirejs": "latest",
+	"requirejs-text": "latest",
+	"jquery": "latest",
+	"underscore": "latest",
+	"wookmark-jquery": "latest",
+	"backbone": "latest",
+	"marionette": "latest",
+	"backbone-relational": "latest"
+    },
+    "devDependencies": {}
+}

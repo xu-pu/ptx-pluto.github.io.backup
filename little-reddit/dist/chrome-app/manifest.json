@@ -1,0 +1,10 @@
+{
+  "name": "Little Reddit",
+  "description": "A little reddit reader for browser",
+  "version": "0.1",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

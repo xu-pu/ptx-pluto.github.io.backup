@@ -1,0 +1,5 @@
+<% _.each(['new', 'hot', 'rising', 'controversial'], function(o) { %>
+<li class="subreddit__navbar-tab <% if (order === o){ %> is_active <% } %>">
+  <a href="#/subreddit/<%= name %>/<%= o %>" id="subroute-new"><%= o.toUpperCase() %></a>
+</li>
+<% }); %>

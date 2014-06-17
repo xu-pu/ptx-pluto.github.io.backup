@@ -1,0 +1,25 @@
+<% if ( url && url.match(/.(jpg)|(gif)|(png)$/) ) { %>
+<div class="feed__thumbnail-container">
+  <img src="<%= url %>">
+</div>
+<% } %>
+
+<div class="feed__details">
+  <div>
+    <%= author %>
+  </div>
+  <div>
+    <%= _.unescape(selftext_html) %>
+  </div>
+</div>
+
+<div class="feed__title-bar">
+  <div class="feed__title"><%= title %></div>
+  <hr>
+  <div class="feed__status">
+    <span class="feed__details-toggle"></span>
+    <span class="feed__save"></span>
+    <span class="feed__up"></span>
+    <span class="feed__down"></span>
+  </div>
+</div>

@@ -1,0 +1,140 @@
+html {
+    @extend .frame;
+    height: 100%;
+}
+
+body {
+    @extend .frame;
+    height: 100%;
+
+    font-size : 100%;
+    background : rgb(228, 228, 228);
+}
+
+#content-page {
+    @extend .frame;
+    height: 100%;
+}
+
+#sidebar-container {
+    @extend .frame;
+    height: 100%;
+    width: $sidebar-width;
+    font-size : 0.8125em;
+    background-color: $pale-blue;
+    position : fixed;
+    left : 0;
+}
+
+#main-container {
+    @extend .frame;
+    @include box-shadow(-4px 0px 3px 0px rgba(68, 68, 68, 0.7));
+    position: fixed;
+    height: 100%;
+    left: $sidebar-width;
+    right: 0;
+    transition: left 1s;
+
+    &.fullscreen {
+	left: 0;
+    }
+
+}
+
+.main-body {
+    position: absolute;
+    top: $status-bar-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: $deep-green;
+}
+
+
+.main-header {
+    @extend .frame;
+    height: $status-bar-height;
+    line-height: $status-bar-height;
+    background-color: $dark-green;
+    position: relative;
+
+    img {
+	cursor: pointer;
+	height: 100%;
+	padding-left: 10px;
+    };
+
+}
+
+.main-header .subreddit-title {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    height: 100%;
+    min-width: 100px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+
+};
+    
+.subreddit-navbar-container {
+    @extend .frame;
+    height: 100%;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+
+$navbar-tab__highlight-height : 10px;
+
+.subreddit-navbar {
+    @extend .frame;
+    height: 100%;
+}
+
+.subreddit__navbar-tab {
+    @extend .frame;
+    margin: -4px !important;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    height: calc(100% - #{$navbar-tab__highlight-height});
+    min-width: 50px;
+
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+
+    &:first-child:before {
+	content: '|';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: $pale-green;
+    };
+
+    &:after {
+	content: '|';
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: $pale-green;
+    };
+
+    &:hover, &.is_active {
+	border-bottom: solid $pale-green $navbar-tab__highlight-height !important;
+    };
+    
+    a, a:link, a:visited {
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	height: 100%;
+	width: 100%;
+	color: white;
+    }
+    
+}

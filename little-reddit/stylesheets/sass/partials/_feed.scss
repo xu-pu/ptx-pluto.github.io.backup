@@ -1,0 +1,86 @@
+@import "compass";
+
+.feed {
+    @extend .frame;
+    width : 250px;
+    background-color : #ffffff;
+    overflow: hidden;
+    @include transition(top 0.5s, left 0.5s);
+}
+
+.feed__thumbnail-container {
+    @extend .frame;
+
+    img {
+	display: block;
+	width: 100%;
+    };
+}
+
+.feed__title-bar {
+    margin: 0;
+    border: 0;
+    padding: 5px;
+}
+
+.feed__title {}
+
+.feed__status {
+
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 2em;
+
+    span {
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-left: 5px;
+    }
+
+}
+
+.feed__save {
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    @extend .glyphicons-heart-empty;
+
+    &:hover {
+	@extend .glyphicons-heart;
+    }
+}
+
+.feed__details-toggle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    @extend .glyphicons-resize-full;
+
+    &:hover {
+	@extend .glyphicons-resize-small;
+    }
+}
+
+.feed__up {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    @extend .glyphicons-circle-arrow-top;
+
+    &:hover {
+	@extend .glyphicons-circle-plus;
+    }
+
+}
+
+.feed__down {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    @extend .glyphicons-circle-arrow-down;
+
+    &:hover {
+	@extend .glyphicons-circle-minus;
+    }
+
+}
